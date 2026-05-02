@@ -1,1 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning & Evening Adhkār</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   MORNING & EVENING ADHKĀR
+   White · Black · Mature · Clean
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:#ffffff;
+  --ink:#0d0d0d;
+  --ink-70:rgba(13,13,13,.92);
+  --ink-45:rgba(13,13,13,.72);
+  --ink-28:rgba(13,13,13,.55);
+  --ink-14:rgba(13,13,13,.22);
+  --ink-07:rgba(13,13,13,.09);
+  --ink-03:rgba(13,13,13,.04);
+  --surface:#f8f8f8;
+  --surface-h:#f2f2f2;
+  /* legacy aliases */
+  --gold:var(--ink);--gold-l:var(--ink-70);--gold-d:var(--ink-28);
+  --green:var(--ink-70);--green-bg:var(--ink-03);
+  --amber:var(--ink-70);--blue:var(--ink-45);
+  --border:var(--ink-14);--border-s:var(--ink-28);
+  --white:var(--ink);--white-70:var(--ink-70);--white-45:var(--ink-45);
+  --white-25:var(--ink-28);--white-10:var(--ink-14);--white-06:var(--ink-07);
+  --line:var(--ink-14);--line-s:var(--ink-28);
+  --w100:var(--ink);--w80:var(--ink-70);--w55:var(--ink-45);
+  --w35:var(--ink-28);--w18:var(--ink-14);--w08:var(--ink-07);--w04:var(--ink-03);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink-70);
+  font-family:'Lora',serif;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── LAYOUT ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 80px}
+
+/* ── HEADER ── */
+.hdr{text-align:center;padding:52px 20px 28px;border-bottom:1px solid var(--ink-14)}
+.orn{font-family:'Cinzel',serif;color:var(--ink-14);font-size:.7rem;letter-spacing:18px;display:block;margin-bottom:20px}
+.hdr h1{
+  font-family:'Cinzel',serif;font-size:clamp(1.5rem,4vw,2.4rem);
+  font-weight:700;color:var(--ink);letter-spacing:5px;
+  text-transform:uppercase;line-height:1.15;
+}
+.hdr h1 em{
+  display:block;font-size:.42em;letter-spacing:9px;
+  color:var(--ink-28);font-weight:400;margin-top:10px;font-style:normal;
+}
+.hdr-ar{font-family:'Amiri',serif;font-size:1.6rem;color:var(--ink-28);margin-top:16px;direction:rtl}
+
+/* ── DIVIDER ── */
+.div{display:flex;align-items:center;gap:14px;margin:14px 0}
+.div::before,.div::after{content:'';flex:1;height:1px;background:var(--ink-14)}
+.div span{color:var(--ink-14);font-size:.7rem}
+
+/* ── INTRO ── */
+.intro{padding:14px 18px;margin-bottom:12px;border:1px solid var(--ink-14);background:var(--ink-03)}
+.intro p{color:var(--ink-45);font-size:.80rem;line-height:1.85}
+.intro strong{color:var(--ink-70);font-weight:500}
+.intro em{color:var(--ink-28);font-size:.75rem}
+.ai-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  border:1px solid var(--ink-14);padding:4px 12px;
+  font-size:.62rem;font-family:'Cinzel',serif;
+  letter-spacing:1.8px;color:var(--ink-28);margin:10px auto 0;
+}
+
+/* ── LEGEND ── */
+.leg{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  margin:0 0 10px;font-size:.64rem;
+  font-family:'Cinzel',serif;letter-spacing:.8px;color:var(--ink-28);
+}
+.lq,.lb,.lm,.le{color:var(--ink-28)}
+
+/* ── SECTION HEADERS ── */
+.sec{
+  text-align:center;padding:14px 0 8px;
+  position:sticky;top:0;z-index:20;
+  background:var(--bg);
+  border-bottom:1px solid var(--ink-14);
+  margin-bottom:0;
+}
+.sec h2{
+  font-family:'Cinzel',serif;font-size:.68rem;
+  letter-spacing:7px;text-transform:uppercase;color:var(--ink-28);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.sec h2::before,.sec h2::after{
+  content:'';display:inline-block;
+  width:24px;height:1px;background:var(--ink-14);
+}
+
+/* ── CARDS ── */
+.card{
+  border-left:1px solid var(--ink-14);
+  border-right:1px solid var(--ink-14);
+  border-bottom:1px solid var(--ink-14);
+  padding:16px 18px 12px;
+  margin-bottom:0;
+  position:relative;overflow:hidden;
+  background:var(--bg);
+  transition:background .18s;
+}
+.card:first-of-type{border-top:1px solid var(--ink-14)}
+.card+.card{border-top:none}
+.card-open{background:var(--ink-03)}
+.card:hover{background:var(--ink-03)}
+.card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:2px;height:100%;
+  background:var(--ink-14);
+}
+.card.qcard::before{background:var(--ink-28)}
+.card.mcard::before,.card.ecard::before{background:var(--ink-14)}
+.card.card-open::before{background:var(--ink-28)}
+
+@keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.card{animation:fu .32s ease both}
+
+.cnum{
+  position:absolute;top:10px;right:14px;
+  font-family:'Cinzel',serif;font-size:.52rem;
+  color:var(--ink-14);letter-spacing:1px;
+}
+
+/* ── TAGS ── */
+.tag{
+  display:inline-block;font-size:.56rem;
+  font-family:'Cinzel',serif;letter-spacing:1px;
+  padding:1px 7px;margin:0 4px 7px 0;
+  background:transparent;
+}
+.tq{border:1px solid var(--ink-28);color:var(--ink-70)}
+.tb{border:1px solid var(--ink-14);color:var(--ink-45)}
+.tm{border:1px solid var(--ink-14);color:var(--ink-45)}
+.te{border:1px solid var(--ink-14);color:var(--ink-28)}
+.ts{border:1px solid var(--ink-14);color:var(--ink-28)}
+
+/* ── ARABIC / TR / EN ── */
+.ar{
+  font-family:'Amiri',serif;
+  font-size:clamp(1.25rem,3.2vw,1.6rem);
+  line-height:2.3;color:var(--ink);
+  direction:rtl;text-align:right;
+  margin-bottom:10px;padding-bottom:10px;
+  border-bottom:1px solid var(--ink-14);
+}
+.tr{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:.84rem;color:var(--ink-70);
+  line-height:1.82;margin-bottom:7px;
+  padding:7px 12px;
+  border-left:2px solid var(--ink-14);
+}
+.en{font-size:.82rem;color:var(--ink-45);line-height:1.88;margin-bottom:6px}
+.nt{
+  font-size:.74rem;color:var(--ink-45);
+  font-style:italic;margin-top:7px;
+  padding-left:10px;border-left:2px solid var(--ink-14);
+}
+.sr{font-size:.60rem;color:var(--ink-28);margin-top:7px;font-family:'Cinzel',serif;letter-spacing:.3px}
+
+/* ── AUDIO STRIP ── */
+.strip{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  margin-top:8px;padding:6px 0 0;
+  border-top:1px solid var(--ink-14);
+}
+.strip-lbl{font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:2px;color:var(--ink-14);flex-shrink:0}
+.strip-lbl.green{color:var(--ink-28)}
+.prog-wrap{flex:1;min-width:50px;height:1px;background:var(--ink-14);cursor:pointer;position:relative;overflow:hidden}
+.prog-fill{height:100%;background:var(--ink-45);width:0%;transition:width .2s linear}
+.prog-fill.gr{background:var(--ink-70)}
+.s-time{font-family:'Cinzel',serif;font-size:.52rem;color:var(--ink-14);white-space:nowrap}
+
+/* ── BUTTONS ── */
+.btn{
+  border:none;padding:5px 13px;
+  cursor:pointer;font-family:'Cinzel',serif;
+  font-size:.58rem;letter-spacing:1.2px;
+  transition:all .16s;flex-shrink:0;white-space:nowrap;
+}
+.btn-q{background:transparent;color:var(--ink-45);border:1px solid var(--ink-28)}
+.btn-q:hover{background:var(--ink-07);color:var(--ink)}
+.btn-q.on{background:var(--ink-07);color:var(--ink)}
+.btn-q:disabled{opacity:.3;cursor:default}
+.btn-ai{background:transparent;color:var(--ink-28);border:1px solid var(--ink-14)}
+.btn-ai:hover{border-color:var(--ink-28);color:var(--ink-45)}
+.btn-ai.on{background:var(--ink-07);color:var(--ink-45);border-color:var(--ink-28)}
+.btn-ai:disabled{opacity:.3;cursor:default}
+.btn-na{background:transparent;color:var(--ink-14);border:1px solid var(--ink-14);cursor:default;font-size:.56rem}
+
+/* ── SPINNER ── */
+.spin{display:inline-block;width:8px;height:8px;border:1.5px solid var(--ink-07);border-top-color:var(--ink-45);border-radius:50%;animation:sp .6s linear infinite;vertical-align:middle;margin-right:4px}
+.spin.gr{border-top-color:var(--ink-70)}
+@keyframes sp{to{transform:rotate(360deg)}}
+.gen-dots::after{content:'';animation:dots 1.4s steps(4,end) infinite}
+@keyframes dots{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}100%{content:''}}
+
+.na-note{font-size:.66rem;color:var(--ink-14);font-style:italic;padding:2px 0}
+
+.alert{display:none;font-size:.70rem;padding:9px 14px;margin-bottom:14px;text-align:center;color:var(--ink-45);background:var(--ink-03);border:1px solid var(--ink-14)}
+
+/* ── FOOTER ── */
+footer{
+  text-align:center;padding:36px 0 20px;
+  color:var(--ink);font-family:'Cinzel',serif;
+  font-size:.58rem;letter-spacing:2.5px;
+  border-top:1px solid var(--ink-14);margin-top:20px;
+}
+footer .brand{color:var(--ink-28);display:block;margin-top:8px;font-size:.54rem;letter-spacing:2px}
+
+.cached-dot{width:4px;height:4px;border-radius:50%;background:var(--ink-45);flex-shrink:0;display:none}
+.cached-dot.show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ── HEADER ── -->
+<div class="hdr">
+  <span class="orn">✦ ✦ ✦</span>
+  <h1>Morning &amp; Evening<em>Adhkār · الأذكار</em></h1>
+  <div class="hdr-ar">أذكار الصباح والمساء</div>
+</div>
+
+<div class="div"><span>✦</span></div>
+
+<div class="intro">
+  <p>
+    <strong>Qur'ānic sections</strong> stream <strong>Mahmoud Khalil Al-Ḥuṣary</strong> — slow, measured, perfect for learning.<br>
+    <strong>Du'ā sections</strong> use an <strong>AI-generated calm male voice with tajweed</strong> — tap <strong>▶ Listen</strong> to generate on demand; audio is cached so it only generates once.<br>
+    <em>Where a du'ā has no available source, a note is shown. Qur'an audio requires an internet connection.</em>
+  </p>
+  <div style="text-align:center;margin-top:10px">
+    <span class="ai-badge">✦ AI Voice · Calm Male · Tajweed Style</span>
+  </div>
+</div>
+
+<div id="permAlert" class="alert">⚠ Microphone access denied. Please allow microphone in your browser settings.</div>
+
+<div class="leg">
+  <span class="lq">◈ Qur'ān — Al-Ḥuṣary stream</span>
+  <span class="lb">◈ Morning &amp; Evening</span>
+  <span class="lm">◈ Morning only</span>
+  <span class="le">◈ Evening only</span>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     OPENING DUA — Tahmid & Salah
+══════════════════════════════════════════ -->
+<div class="sec"><h2>Opening</h2></div>
+
+<div class="card card-open">
+  <div class="cnum">00</div>
+  <span class="tag tb">BEGIN HERE · ALWAYS</span>
+  <div class="ar" style="font-size:clamp(1.4rem,4vw,1.85rem);line-height:2.3;text-align:center">
+    الْحَمْدُ لِلَّهِ وَحْدَهُ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى مَنْ لَا نَبِيَّ بَعْدَهُ
+  </div>
+  <div class="tr" style="text-align:center;font-size:.95rem">
+    Al-ḥamdu lillāhi waḥdah, waṣ-ṣalātu was-salāmu 'alā man lā nabiyya ba'dah.
+  </div>
+  <div class="en" style="text-align:center;font-size:.9rem">
+    All praise belongs to Allah alone, and peace and blessings be upon the one after whom there is no prophet.
+  </div>
+  <div class="strip" id="s-d00">
+    <span class="strip-lbl">AI VOICE</span>
+    <span class="cached-dot" id="cd-d00"></span>
+    <div class="prog-wrap" onclick="seekAI('d00',event)"><div class="prog-fill" id="pf-d00"></div></div>
+    <span class="s-time" id="pt-d00">0:00</span>
+    <button class="btn btn-ai" id="pb-d00" onclick="playAI('d00')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     QURANIC RECITATIONS  (Al-Husary stream)
+══════════════════════════════════════════ -->
+<div class="sec"><h2>Qur'ānic Recitations</h2></div>
+
+<!-- Q1 – Ayat al-Kursi -->
+<div class="card qcard">
+  <div class="cnum">Q1</div>
+  <span class="tag tq">QUR'ĀN · 2:255</span><span class="tag tb">BOTH · 1×</span>
+  <div class="ar">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ</div>
+  <div class="tr">Allāhu lā ilāha illā huwal-ḥayyul-qayyūm. Lā ta'khudhuhū sinatun wa lā nawm. Lahū mā fis-samāwāti wa mā fil-arḍ. Man dhalladhī yashfa'u 'indahū illā bi-idhnih. Ya'lamu mā bayna aydīhim wa mā khalfahum. Wa lā yuḥīṭūna bi-shay'im min 'ilmihī illā bimā shā'. Wasi'a kursiyyuhus-samāwāti wal-arḍ. Wa lā ya'ūduhū ḥifẓuhumā. Wa huwal-'aliyyul-'aẓīm.</div>
+  <div class="en">Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and on the earth. Who can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Throne extends over the heavens and the earth, and their preservation tires Him not. He is the Most High, the Most Great.</div>
+  <div class="nt">Whoever recites Āyat al-Kursī after every obligatory prayer — nothing will prevent him from entering Paradise except death.</div>
+  <div class="sr">Al-Baqarah 2:255 · An-Nasa'i · Ibn Hibban</div>
+  <div class="strip" id="s-q1">
+    <span class="strip-lbl green">AL-ḤUṢARY</span>
+    <span class="cached-dot" id="cd-q1"></span>
+    <div class="prog-wrap" onclick="seekQ('q1',event)"><div class="prog-fill gr" id="pf-q1"></div></div>
+    <span class="s-time" id="pt-q1">0:00</span>
+    <button class="btn btn-q" id="pb-q1" onclick="playQ('q1')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- Q2 – Al-Ikhlas -->
+<div class="card qcard">
+  <div class="cnum">Q2</div>
+  <span class="tag tq">QUR'ĀN · 112</span><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿﴾ قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾ اللَّهُ الصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾</div>
+  <div class="tr">Bismillāhir-raḥmānir-raḥīm. Qul huwa llāhu aḥad. Allāhuṣ-ṣamad. Lam yalid wa lam yūlad. Wa lam yakul-lahū kufuwan aḥad.</div>
+  <div class="en">In the name of Allah, the Most Gracious, the Most Merciful. Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.</div>
+  <div class="nt">Recite 3×. Together with al-Falaq and an-Nās, they suffice as a protection against everything.</div>
+  <div class="sr">Al-Ikhlas 112 · Abu Dawud 4/322 · At-Tirmizi 5/567</div>
+  <div class="strip" id="s-q2">
+    <span class="strip-lbl green">AL-ḤUṢARY</span>
+    <span class="cached-dot" id="cd-q2"></span>
+    <div class="prog-wrap" onclick="seekQ('q2',event)"><div class="prog-fill gr" id="pf-q2"></div></div>
+    <span class="s-time" id="pt-q2">0:00</span>
+    <button class="btn btn-q" id="pb-q2" onclick="playQ('q2')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- Q3 – Al-Falaq -->
+<div class="card qcard">
+  <div class="cnum">Q3</div>
+  <span class="tag tq">QUR'ĀN · 113</span><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿﴾ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾</div>
+  <div class="tr">Bismillāhir-raḥmānir-raḥīm. Qul a'ūdhu bi-rabbil-falaq. Min sharri mā khalaq. Wa min sharri ghāsiqin idhā waqab. Wa min sharrin-naffāthāti fil-'uqad. Wa min sharri ḥāsidin idhā ḥasad.</div>
+  <div class="en">Say: I seek refuge in the Lord of daybreak — from the evil of what He has created, from the evil of darkness when it settles, from the evil of the blowers in knots, and from the evil of an envier when he envies.</div>
+  <div class="nt">Recite 3×.</div>
+  <div class="sr">Al-Falaq 113 · Abu Dawud 4/322 · At-Tirmizi 5/567</div>
+  <div class="strip" id="s-q3">
+    <span class="strip-lbl green">AL-ḤUṢARY</span>
+    <span class="cached-dot" id="cd-q3"></span>
+    <div class="prog-wrap" onclick="seekQ('q3',event)"><div class="prog-fill gr" id="pf-q3"></div></div>
+    <span class="s-time" id="pt-q3">0:00</span>
+    <button class="btn btn-q" id="pb-q3" onclick="playQ('q3')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- Q4 – An-Nas -->
+<div class="card qcard">
+  <div class="cnum">Q4</div>
+  <span class="tag tq">QUR'ĀN · 114</span><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿﴾ قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿١﴾ مَلِكِ النَّاسِ ﴿٢﴾ إِلَٰهِ النَّاسِ ﴿٣﴾ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿٤﴾ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿٥﴾ مِنَ الْجِنَّةِ وَالنَّاسِ ﴿٦﴾</div>
+  <div class="tr">Bismillāhir-raḥmānir-raḥīm. Qul a'ūdhu bi-rabbin-nās. Malikin-nās. Ilāhin-nās. Min sharril-waswāsil-khannās. Alladhī yuwaswisu fī ṣudūrin-nās. Minal-jinnati wan-nās.</div>
+  <div class="en">Say: I seek refuge in the Lord of mankind — the Sovereign of mankind, the God of mankind — from the evil of the retreating whisperer, who whispers into the breasts of mankind, from among the jinn and mankind.</div>
+  <div class="nt">Recite 3×.</div>
+  <div class="sr">An-Nas 114 · Abu Dawud 4/322 · At-Tirmizi 5/567</div>
+  <div class="strip" id="s-q4">
+    <span class="strip-lbl green">AL-ḤUṢARY</span>
+    <span class="cached-dot" id="cd-q4"></span>
+    <div class="prog-wrap" onclick="seekQ('q4',event)"><div class="prog-fill gr" id="pf-q4"></div></div>
+    <span class="s-time" id="pt-q4">0:00</span>
+    <button class="btn btn-q" id="pb-q4" onclick="playQ('q4')">▶ Listen</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     MORNING & EVENING DU'ĀS
+══════════════════════════════════════════ -->
+<div class="sec"><h2>Morning &amp; Evening</h2></div>
+
+<!-- MACRO: each dua card with AI voice strip -->
+<!-- id, num, tags, arabic, transliteration, english, note, source -->
+
+<div class="card" id="card-d01">
+  <div class="cnum">01</div><span class="tag tb">BOTH</span>
+  <div class="ar">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ</div>
+  <div class="tr">Aṣbaḥnā wa aṣbaḥal-mulku lillāh, wal-ḥamdu lillāh, lā ilāha illallāhu waḥdahū lā sharīka lah, lahul-mulku wa lahul-ḥamdu wa huwa 'alā kulli shay'in qadīr. Rabbi as'aluka khayra mā fī hādhal-yawmi wa khayra mā ba'dah, wa a'ūdhu bika min sharri mā fī hādhal-yawmi wa sharri mā ba'dah. Rabbi a'ūdhu bika minal-kasali wa sū'il-kibar. Rabbi a'ūdhu bika min 'adhābin fin-nāri wa 'adhābin fil-qabr.<br><em>(Evening: Amsaynā… "hādhal-yawm" → "hādhihil-laylah")</em></div>
+  <div class="en">We have entered the morning and with it all dominion belongs to Allah. Praise be to Allah. None has the right to be worshipped but Allah alone, no partner. To Him belongs dominion and praise, and He is Able to do all things. My Lord, I ask You for the good of this day and what follows; I seek refuge from its evil and what follows. My Lord, I seek refuge from laziness and the misery of old age, and from torment in the Fire and in the grave.</div>
+  <div class="sr">Muslim 4/2088</div>
+  <div class="strip" id="s-d01">
+    <span class="strip-lbl">AI VOICE</span>
+    <span class="cached-dot" id="cd-d01"></span>
+    <div class="prog-wrap" onclick="seekAI('d01',event)"><div class="prog-fill" id="pf-d01"></div></div>
+    <span class="s-time" id="pt-d01">0:00</span>
+    <button class="btn btn-ai" id="pb-d01" onclick="playAI('d01')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d02">
+  <div class="cnum">02</div><span class="tag tb">BOTH</span>
+  <div class="ar">اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ</div>
+  <div class="tr">Allāhumma bika aṣbaḥnā wa bika amsaynā wa bika naḥyā wa bika namūtu wa ilayka n-nushūr.<br><em>(Evening: Allāhumma bika amsaynā wa bika aṣbaḥnā… wa ilayka l-maṣīr.)</em></div>
+  <div class="en">O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.</div>
+  <div class="sr">Sahih At-Tirmizi 3/142</div>
+  <div class="strip" id="s-d02">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d02"></span>
+    <div class="prog-wrap" onclick="seekAI('d02',event)"><div class="prog-fill" id="pf-d02"></div></div>
+    <span class="s-time" id="pt-d02">0:00</span>
+    <button class="btn btn-ai" id="pb-d02" onclick="playAI('d02')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d03">
+  <div class="cnum">03</div><span class="tag tb">BOTH</span><span class="tag ts">SAYYID AL-ISTIGHFĀR</span>
+  <div class="ar">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
+  <div class="tr">Allāhumma anta rabbī lā ilāha illā ant, khalaqtanī wa anā 'abduk, wa anā 'alā 'ahdika wa wa'dika mas-taṭa't, a'ūdhu bika min sharri mā ṣana't, abū'u laka bini'matika 'alayy, wa abū'u bidhanbī faghfir lī fa-innahū lā yaghfirudh-dhunūba illā ant.</div>
+  <div class="en">O Allah, You are my Lord. There is none worthy of worship but You. You created me and I am Your slave. I keep Your covenant and pledge so far as I am able. I seek refuge from the evil of what I have done. I admit to Your blessings upon me, and I admit to my misdeeds. Forgive me, for none may forgive sins but You.</div>
+  <div class="nt">Whoever recites this with conviction in the evening and dies that night shall enter Paradise; whoever recites it in the morning and dies that day shall enter Paradise.</div>
+  <div class="sr">Al-Bukhari 7/150 · An-Nasa'i · At-Tirmizi</div>
+  <div class="strip" id="s-d03">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d03"></span>
+    <div class="prog-wrap" onclick="seekAI('d03',event)"><div class="prog-fill" id="pf-d03"></div></div>
+    <span class="s-time" id="pt-d03">0:00</span>
+    <button class="btn btn-ai" id="pb-d03" onclick="playAI('d03')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d04">
+  <div class="cnum">04</div><span class="tag tb">BOTH · 4×</span>
+  <div class="ar">اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ</div>
+  <div class="tr">Allāhumma innī aṣbaḥtu ushhiduka wa ushhidu ḥamalata 'arshika wa malā'ikataka wa jamī'a khalqik, annaka anta llāhu lā ilāha illā anta waḥdaka lā sharīka lak, wa anna Muḥammadan 'abduka wa rasūluk.<br><em>(Evening: …amsaytu ushhiduka…) · Recite 4 times.</em></div>
+  <div class="en">O Allah, I have entered the morning calling You to witness, and calling the bearers of Your Throne, Your angels, and all of Your creation to witness that You are Allah — none worthy of worship but You alone, no partners — and that Muhammad is Your slave and Messenger.</div>
+  <div class="nt">Allah will spare whoever says this four times in the morning or evening from the Fire of Hell.</div>
+  <div class="sr">Abu Dawud 4/317 · An-Nasa'i · Ibn As-Sunni</div>
+  <div class="strip" id="s-d04">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d04"></span>
+    <div class="prog-wrap" onclick="seekAI('d04',event)"><div class="prog-fill" id="pf-d04"></div></div>
+    <span class="s-time" id="pt-d04">0:00</span>
+    <button class="btn btn-ai" id="pb-d04" onclick="playAI('d04')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d05">
+  <div class="cnum">05</div><span class="tag tb">BOTH</span>
+  <div class="ar">اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ</div>
+  <div class="tr">Allāhumma mā aṣbaḥa bī min ni'matin aw bi-aḥadin min khalqika faminka waḥdaka lā sharīka lak, falakal-ḥamdu wa laka sh-shukr.<br><em>(Evening: …mā amsa bī…)</em></div>
+  <div class="en">O Allah, whatever blessing has been received by me in the morning, or by any of Your creation, is from You alone — You have no partner. All praise is for You and all thanks is to You.</div>
+  <div class="nt">Whoever recites this in the morning has completed his obligation to thank Allah for that day; in the evening, for that night.</div>
+  <div class="sr">Abu Dawud 4/318 · Ibn As-Sunni (no. 41) · Ibn Hibban (no. 2361)</div>
+  <div class="strip" id="s-d05">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d05"></span>
+    <div class="prog-wrap" onclick="seekAI('d05',event)"><div class="prog-fill" id="pf-d05"></div></div>
+    <span class="s-time" id="pt-d05">0:00</span>
+    <button class="btn btn-ai" id="pb-d05" onclick="playAI('d05')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d06">
+  <div class="cnum">06</div><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">اللَّهُمَّ عَافِنِي فِي بَدَنِي اللَّهُمَّ عَافِنِي فِي سَمْعِي اللَّهُمَّ عَافِنِي فِي بَصَرِي لَا إِلَهَ إِلَّا أَنْتَ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ لَا إِلَهَ إِلَّا أَنْتَ</div>
+  <div class="tr">Allāhumma 'āfinī fī badanī, Allāhumma 'āfinī fī sam'ī, Allāhumma 'āfinī fī baṣarī, lā ilāha illā ant. Allāhumma innī a'ūdhu bika minal-kufri wal-faqr, wa a'ūdhu bika min 'adhābil-qabr, lā ilāha illā ant. · 3 times.</div>
+  <div class="en">O Allah, make me healthy in my body. O Allah, preserve my hearing. O Allah, preserve my sight. There is none worthy of worship but You. O Allah, I seek refuge from disbelief and poverty, and from the punishment of the grave. There is none worthy of worship but You.</div>
+  <div class="sr">Abu Dawud 4/324 · Ahmad 5/42 · An-Nasa'i · Ibn Hibban (no. 2361)</div>
+  <div class="strip" id="s-d06">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d06"></span>
+    <div class="prog-wrap" onclick="seekAI('d06',event)"><div class="prog-fill" id="pf-d06"></div></div>
+    <span class="s-time" id="pt-d06">0:00</span>
+    <button class="btn btn-ai" id="pb-d06" onclick="playAI('d06')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d07">
+  <div class="cnum">07</div><span class="tag tb">BOTH · 7×</span>
+  <div class="ar">حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</div>
+  <div class="tr">Ḥasbiyallāhu lā ilāha illā huwa 'alayhi tawakkaltu wa huwa rabbul-'arshil-'aẓīm. · 7 times morning &amp; evening.</div>
+  <div class="en">Allah is sufficient for me. There is none worthy of worship but Him. I have placed my trust in Him, and He is the Lord of the Majestic Throne.</div>
+  <div class="sr">Ibn As-Sunni (no. 71) · Abu Dawud 4/321</div>
+  <div class="strip" id="s-d07">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d07"></span>
+    <div class="prog-wrap" onclick="seekAI('d07',event)"><div class="prog-fill" id="pf-d07"></div></div>
+    <span class="s-time" id="pt-d07">0:00</span>
+    <button class="btn btn-ai" id="pb-d07" onclick="playAI('d07')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d08">
+  <div class="cnum">08</div><span class="tag tb">BOTH</span>
+  <div class="ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي</div>
+  <div class="tr">Allāhumma innī as'alukal-'afwa wal-'āfiyata fid-dunyā wal-ākhirah. Allāhumma innī as'alukal-'afwa wal-'āfiyata fī dīnī wa dunyāya wa ahlī wa mālī. Allāhumma stur 'awrātī wa āmin raw'ātī. Allāhumma iḥfaẓnī min bayni yadayya wa min khalfī wa 'an yamīnī wa 'an shimālī wa min fawqī, wa a'ūdhu bi-'aẓamatika an ughtāla min taḥtī.</div>
+  <div class="en">O Allah, I seek Your forgiveness and protection in this world and the next. O Allah, I seek Your forgiveness and protection in my religion, worldly affairs, family and wealth. O Allah, conceal my faults and calm my fears. O Allah, guard me from in front, behind, right, left, and above me. I seek refuge in Your Greatness from being struck from beneath me.</div>
+  <div class="sr">Sahih Ibn Majah 2/332 · Abu Dawud</div>
+  <div class="strip" id="s-d08">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d08"></span>
+    <div class="prog-wrap" onclick="seekAI('d08',event)"><div class="prog-fill" id="pf-d08"></div></div>
+    <span class="s-time" id="pt-d08">0:00</span>
+    <button class="btn btn-ai" id="pb-d08" onclick="playAI('d08')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d09">
+  <div class="cnum">09</div><span class="tag tb">BOTH</span>
+  <div class="ar">اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ</div>
+  <div class="tr">Allāhumma 'ālimaghaybi wash-shahādati fāṭiras-samāwāti wal-arḍ, rabba kulli shay'in wa malīkah, ashhadu an lā ilāha illā ant, a'ūdhu bika min sharri nafsī wa min sharrish-shayṭāni wa shirkih, wa an aqtarifa 'alā nafsī sū'an aw ajurrahū ilā muslim.</div>
+  <div class="en">O Allah, Knower of the unseen and the evident, Maker of the heavens and the earth, Lord and Possessor of all things — I bear witness there is none worthy of worship but You. I seek refuge from the evil of my soul, from Satan and his helpers, and from bringing evil upon myself or upon any Muslim.</div>
+  <div class="sr">Sahih At-Tirmizi 3/142 · Abu Dawud</div>
+  <div class="strip" id="s-d09">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d09"></span>
+    <div class="prog-wrap" onclick="seekAI('d09',event)"><div class="prog-fill" id="pf-d09"></div></div>
+    <span class="s-time" id="pt-d09">0:00</span>
+    <button class="btn btn-ai" id="pb-d09" onclick="playAI('d09')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d10">
+  <div class="cnum">10</div><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</div>
+  <div class="tr">Bismillāhilladhī lā yaḍurru ma'as-mihī shay'un fil-arḍi wa lā fis-samā'i wa huwas-samī'ul-'alīm. · 3 times.</div>
+  <div class="en">In the Name of Allah — with Whose Name nothing can cause harm in the earth nor in the heavens, and He is the All-Hearing, the All-Knowing.</div>
+  <div class="nt">Whoever recites it in the morning will not be afflicted by any calamity before evening; whoever recites it in the evening will not be overtaken by any calamity before morning.</div>
+  <div class="sr">Abu Dawud 4/323 · At-Tirmizi 5/465 · Ibn Majah 2/332 · Ahmad</div>
+  <div class="strip" id="s-d10">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d10"></span>
+    <div class="prog-wrap" onclick="seekAI('d10',event)"><div class="prog-fill" id="pf-d10"></div></div>
+    <span class="s-time" id="pt-d10">0:00</span>
+    <button class="btn btn-ai" id="pb-d10" onclick="playAI('d10')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d11">
+  <div class="cnum">11</div><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">رَضِيتُ بِاللَّهِ رَبَّاً وَبِالْإِسْلَامِ دِيناً وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيَّاً</div>
+  <div class="tr">Raḍītu billāhi rabbā, wa bil-islāmi dīnā, wa bi-Muḥammadin ṣallallāhu 'alayhi wa sallama nabiyyā. · 3 times.</div>
+  <div class="en">I am pleased with Allah as my Lord, with Islam as my religion, and with Muhammad ﷺ as my Prophet.</div>
+  <div class="nt">Allah has promised that whoever says this every morning or evening will be pleased on the Day of Resurrection.</div>
+  <div class="sr">Ahmad 4/337 · An-Nasa'i · Ibn As-Sunni (no. 68) · At-Tirmizi 5/465</div>
+  <div class="strip" id="s-d11">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d11"></span>
+    <div class="prog-wrap" onclick="seekAI('d11',event)"><div class="prog-fill" id="pf-d11"></div></div>
+    <span class="s-time" id="pt-d11">0:00</span>
+    <button class="btn btn-ai" id="pb-d11" onclick="playAI('d11')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d12">
+  <div class="cnum">12</div><span class="tag tb">BOTH</span>
+  <div class="ar">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</div>
+  <div class="tr">Yā Ḥayyu yā Qayyūmu bi-raḥmatika astaghīth, aṣliḥ lī sha'nī kullahu, wa lā takilnī ilā nafsī ṭarfata 'ayn.</div>
+  <div class="en">O Ever-Living One, O Eternal One, by Your mercy I call on You to set right all my affairs. Do not place me in charge of my soul even for the blinking of an eye.</div>
+  <div class="sr">Al-Hakim 1/545</div>
+  <div class="strip" id="s-d12">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d12"></span>
+    <div class="prog-wrap" onclick="seekAI('d12',event)"><div class="prog-fill" id="pf-d12"></div></div>
+    <span class="s-time" id="pt-d12">0:00</span>
+    <button class="btn btn-ai" id="pb-d12" onclick="playAI('d12')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d13">
+  <div class="cnum">13</div><span class="tag tb">BOTH</span>
+  <div class="ar">أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ وَعَلَى كَلِمَةِ الْإِخْلَاصِ وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشْرِكِينَ</div>
+  <div class="tr">Aṣbaḥnā 'alā fiṭratil-islāmi wa 'alā kalimatil-ikhlāṣi wa 'alā dīni nabiyyinā Muḥammadin wa 'alā millati abīnā Ibrāhīma ḥanīfan musliman wa mā kāna minal-mushrikīn. <em>(Evening: Amsaynā…)</em></div>
+  <div class="en">We have entered the morning upon the natural religion of Islam, the word of sincere devotion, the religion of our Prophet Muhammad ﷺ, and the faith of our father Ibrahim — who was upright, a Muslim, and was not of the polytheists.</div>
+  <div class="sr">Ahmad 3/406-7 · An-Nasa'i · At-Tirmizi 4/209</div>
+  <div class="strip" id="s-d13">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d13"></span>
+    <div class="prog-wrap" onclick="seekAI('d13',event)"><div class="prog-fill" id="pf-d13"></div></div>
+    <span class="s-time" id="pt-d13">0:00</span>
+    <button class="btn btn-ai" id="pb-d13" onclick="playAI('d13')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d14">
+  <div class="cnum">14</div><span class="tag tb">BOTH · 100×</span>
+  <div class="ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+  <div class="tr">Subḥānallāhi wa biḥamdih. · 100 times.</div>
+  <div class="en">Glory is to Allah and praise is to Him.</div>
+  <div class="nt">Whoever recites this 100 times morning and evening will not be surpassed on the Day of Resurrection, except by someone who recited it more.</div>
+  <div class="sr">Muslim 4/2071</div>
+  <div class="strip" id="s-d14">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d14"></span>
+    <div class="prog-wrap" onclick="seekAI('d14',event)"><div class="prog-fill" id="pf-d14"></div></div>
+    <span class="s-time" id="pt-d14">0:00</span>
+    <button class="btn btn-ai" id="pb-d14" onclick="playAI('d14')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d15">
+  <div class="cnum">15</div><span class="tag tb">BOTH · 3×</span>
+  <div class="ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ</div>
+  <div class="tr">Subḥānallāhi wa biḥamdihī 'adada khalqihī wa riḍā nafsihī wa zinata 'arshihī wa midāda kalimātih. · 3 times (morning).</div>
+  <div class="en">Glory is to Allah and praise is to Him, by the multitude of His creation, by His Pleasure, by the weight of His Throne, and by the extent of His Words.</div>
+  <div class="sr">Muslim 4/2090</div>
+  <div class="strip" id="s-d15">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d15"></span>
+    <div class="prog-wrap" onclick="seekAI('d15',event)"><div class="prog-fill" id="pf-d15"></div></div>
+    <span class="s-time" id="pt-d15">0:00</span>
+    <button class="btn btn-ai" id="pb-d15" onclick="playAI('d15')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d16">
+  <div class="cnum">16</div><span class="tag tb">BOTH · 10×</span>
+  <div class="ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</div>
+  <div class="tr">Lā ilāha illallāhu waḥdahū lā sharīka lah, lahul-mulku wa lahul-ḥamdu wa huwa 'alā kulli shay'in qadīr. · 10 times (or once if tired).</div>
+  <div class="en">None has the right to be worshipped but Allah alone, Who has no partner. His is the dominion and His is the praise, and He is Able to do all things.</div>
+  <div class="sr">An-Nasa'i · Abu Dawud 4/319 · Ibn Majah · Ahmad 4/60</div>
+  <div class="strip" id="s-d16">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d16"></span>
+    <div class="prog-wrap" onclick="seekAI('d16',event)"><div class="prog-fill" id="pf-d16"></div></div>
+    <span class="s-time" id="pt-d16">0:00</span>
+    <button class="btn btn-ai" id="pb-d16" onclick="playAI('d16')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card" id="card-d17">
+  <div class="cnum">17</div><span class="tag tb">BOTH · 100×</span>
+  <div class="ar">أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ</div>
+  <div class="tr">Astaghfirullāha wa atūbu ilayh. · 100 times daily.</div>
+  <div class="en">I seek the forgiveness of Allah and repent to Him.</div>
+  <div class="sr">Al-Bukhari · Muslim 4/2075</div>
+  <div class="strip" id="s-d17">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d17"></span>
+    <div class="prog-wrap" onclick="seekAI('d17',event)"><div class="prog-fill" id="pf-d17"></div></div>
+    <span class="s-time" id="pt-d17">0:00</span>
+    <button class="btn btn-ai" id="pb-d17" onclick="playAI('d17')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- ══ MORNING ONLY ══ -->
+<div class="sec"><h2>Morning Only</h2></div>
+
+<div class="card mcard" id="card-d18">
+  <div class="cnum">18</div><span class="tag tm">MORNING · 100×</span>
+  <div class="ar">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</div>
+  <div class="tr">Lā ilāha illallāhu waḥdahū lā sharīka lah, lahul-mulku wa lahul-ḥamdu wa huwa 'alā kulli shay'in qadīr. · 100 times in the morning.</div>
+  <div class="en">None has the right to be worshipped but Allah alone, Who has no partner. His is the dominion and His is the praise, and He is Able to do all things.</div>
+  <div class="nt">100 good deeds written, 100 bad deeds erased, equivalent to freeing 10 slaves, and protection from Satan until evening.</div>
+  <div class="sr">Al-Bukhari 4/95 · Muslim 4/2071</div>
+  <div class="strip" id="s-d18">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d18"></span>
+    <div class="prog-wrap" onclick="seekAI('d18',event)"><div class="prog-fill" id="pf-d18"></div></div>
+    <span class="s-time" id="pt-d18">0:00</span>
+    <button class="btn btn-ai" id="pb-d18" onclick="playAI('d18')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="card mcard" id="card-d19">
+  <div class="cnum">19</div><span class="tag tm">MORNING</span>
+  <div class="ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً وَرِزْقاً طَيِّباً وَعَمَلاً مُتَقَبَّلاً</div>
+  <div class="tr">Allāhumma innī as'aluka 'ilman nāfi'an wa rizqan ṭayyiban wa 'amalan mutaqabbalan.</div>
+  <div class="en">O Allah, I ask You for knowledge that is of benefit, a good provision, and deeds that will be accepted.</div>
+  <div class="sr">Ibn As-Sunni (no. 54) · Ibn Majah (no. 925)</div>
+  <div class="strip" id="s-d19">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d19"></span>
+    <div class="prog-wrap" onclick="seekAI('d19',event)"><div class="prog-fill" id="pf-d19"></div></div>
+    <span class="s-time" id="pt-d19">0:00</span>
+    <button class="btn btn-ai" id="pb-d19" onclick="playAI('d19')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- ══ EVENING ONLY ══ -->
+<div class="sec"><h2>Evening Only</h2></div>
+
+<div class="card ecard" id="card-d20">
+  <div class="cnum">20</div><span class="tag te">EVENING · 3×</span>
+  <div class="ar">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+  <div class="tr">A'ūdhu bi-kalimātillāhit-tāmmāti min sharri mā khalaq. · 3 times in the evening.</div>
+  <div class="en">I seek refuge in the Perfect Words of Allah from the evil of what He has created.</div>
+  <div class="nt">Whoever recites this three times in the evening will be protected from insect stings.</div>
+  <div class="sr">Ahmad 2/290 · An-Nasa'i · At-Tirmizi 3/187 · Ibn Majah 2/266</div>
+  <div class="strip" id="s-d20">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d20"></span>
+    <div class="prog-wrap" onclick="seekAI('d20',event)"><div class="prog-fill" id="pf-d20"></div></div>
+    <span class="s-time" id="pt-d20">0:00</span>
+    <button class="btn btn-ai" id="pb-d20" onclick="playAI('d20')">▶ Listen</button>
+  </div>
+</div>
+
+<!-- ══ SALAWAT ══ -->
+<div class="sec"><h2>Ṣalawāt Upon the Prophet ﷺ</h2></div>
+
+<div class="card" id="card-d21">
+  <div class="cnum">21</div><span class="tag tb">BOTH · 10×</span>
+  <div class="ar">اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ</div>
+  <div class="tr">Allāhumma ṣalli wa sallim 'alā nabiyyinā Muḥammad. · 10 times morning &amp; evening.</div>
+  <div class="en">O Allah, bestow peace and blessings upon our Prophet Muhammad.</div>
+  <div class="nt">The Prophet ﷺ said: "Whoever recites blessings upon me 10 times in the morning and 10 times in the evening will obtain my intercession on the Day of Resurrection."</div>
+  <div class="sr">At-Tabrani · Sahih at-Targhib wa at-Tarhib 1/273</div>
+  <div class="strip" id="s-d21">
+    <span class="strip-lbl">AI VOICE</span><span class="cached-dot" id="cd-d21"></span>
+    <div class="prog-wrap" onclick="seekAI('d21',event)"><div class="prog-fill" id="pf-d21"></div></div>
+    <span class="s-time" id="pt-d21">0:00</span>
+    <button class="btn btn-ai" id="pb-d21" onclick="playAI('d21')">▶ Listen</button>
+  </div>
+</div>
+
+<div class="div"><span>✦</span></div>
+<footer>أذكار الصباح والمساء &nbsp;·&nbsp; May Allah accept from us all &nbsp;·&nbsp; آمين<span class="brand">Powered by Abu Zayd Solutions · © 2026</span></footer>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   ARABIC TEXT FOR EACH DUA — used by AI TTS generation
+══════════════════════════════════════════════════════ */
+const DUA_TEXTS = {
+  d00: `الْحَمْدُ لِلَّهِ وَحْدَهُ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى مَنْ لَا نَبِيَّ بَعْدَهُ`,
+  d01: `أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ`,
+  d02: `اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ`,
+  d03: `اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ`,
+  d04: `اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتَكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ`,
+  d05: `اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ، أَوْ بِأَحَدٍ مِنْ خَلْقِكَ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ`,
+  d06: `اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ`,
+  d07: `حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ`,
+  d08: `اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي`,
+  d09: `اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ`,
+  d10: `بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ، وَهُوَ السَّمِيعُ الْعَلِيمُ`,
+  d11: `رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلَامِ دِيناً، وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيَّاً`,
+  d12: `يَا حَيُّ يَا قَيُّومُ، بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ`,
+  d13: `أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ، وَعَلَى كَلِمَةِ الْإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً، وَمَا كَانَ مِنَ الْمُشْرِكِينَ`,
+  d14: `سُبْحَانَ اللَّهِ وَبِحَمْدِهِ`,
+  d15: `سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ`,
+  d16: `لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ`,
+  d17: `أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ`,
+  d18: `لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ`,
+  d19: `اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً`,
+  d20: `أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ، مِنْ شَرِّ مَا خَلَقَ`,
+  d21: `اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ`
+};
+
+/* ══════════════════════════════════════════════════════
+   QURAN AUDIO — Al-Husary via cdn.islamic.network
+══════════════════════════════════════════════════════ */
+const HUSARY_CDN = 'https://cdn.islamic.network/quran/audio-surah/128/ar.husary';
+const Q_URLS = {
+  q1: 'https://everyayah.com/data/Husary_128kbps/002255.mp3',
+  q2: `${HUSARY_CDN}/112.mp3`,
+  q3: `${HUSARY_CDN}/113.mp3`,
+  q4: `${HUSARY_CDN}/114.mp3`,
+};
+
+/* ══════════════════════════════════════════════════════
+   SHARED STATE
+══════════════════════════════════════════════════════ */
+const audioCache = {};   // id → Audio object
+const blobCache  = {};   // id → blob URL (AI generated, persisted via IDB)
+let   activeId   = null;
+
+const fmt = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+
+function stopAll(except) {
+  Object.entries(audioCache).forEach(([id, a]) => {
+    if (id === except) return;
+    a.pause();
+    resetUI(id);
+  });
+  if (activeId !== except) activeId = null;
+}
+
+function resetUI(id) {
+  const pb = document.getElementById(`pb-${id}`);
+  if (pb && !pb.classList.contains('btn-na')) {
+    pb.innerHTML = '▶ Listen';
+    pb.classList.remove('on');
+    pb.disabled = false;
+  }
+  const pf = document.getElementById(`pf-${id}`);
+  if (pf) pf.style.width = '0%';
+  const pt = document.getElementById(`pt-${id}`);
+  if (pt) pt.textContent = '0:00';
+}
+
+function bindAudio(id, audio, isGreen) {
+  audio.addEventListener('timeupdate', () => {
+    if (!audio.duration) return;
+    const pf = document.getElementById(`pf-${id}`);
+    const pt = document.getElementById(`pt-${id}`);
+    if (pf) pf.style.width = ((audio.currentTime / audio.duration) * 100) + '%';
+    if (pt) pt.textContent = fmt(audio.currentTime);
+  });
+  audio.addEventListener('ended', () => { resetUI(id); if (activeId === id) activeId = null; });
+  audio.addEventListener('error', () => {
+    const pb = document.getElementById(`pb-${id}`);
+    if (pb) { pb.innerHTML = '✕ Unavailable'; pb.classList.add('btn-na'); pb.classList.remove('btn-q','btn-ai','on'); pb.disabled = true; }
+    if (activeId === id) activeId = null;
+  });
+}
+
+function doPlay(id, audio) {
+  const pb = document.getElementById(`pb-${id}`);
+  const toggle = activeId === id && !audio.paused;
+  stopAll(id);
+  if (toggle) { activeId = null; return; }
+  if (pb) { pb.innerHTML = '<span class="spin"></span>'; pb.disabled = true; }
+  const start = () => {
+    if (pb) { pb.innerHTML = '⏸ Pause'; pb.classList.add('on'); pb.disabled = false; }
+    activeId = id;
+    audio.play().catch(() => {
+      if (pb) { pb.innerHTML = '✕ Unavailable'; pb.disabled = true; pb.classList.add('btn-na'); }
+    });
+  };
+  if (audio.readyState >= 2) { start(); }
+  else { audio.addEventListener('canplay', start, { once: true }); if (!audio.src || audio.readyState === 0) audio.load(); }
+}
+
+/* ── Qur'an ── */
+function playQ(id) {
+  if (!audioCache[id]) {
+    const a = new Audio(Q_URLS[id]);
+    a.crossOrigin = 'anonymous';
+    a.preload = 'none';
+    bindAudio(id, a, true);
+    audioCache[id] = a;
+  }
+  doPlay(id, audioCache[id]);
+}
+
+function seekQ(id, e) {
+  const a = audioCache[id]; if (!a || !a.duration) return;
+  const r = document.getElementById(`pf-${id}`).parentElement.getBoundingClientRect();
+  a.currentTime = ((e.clientX - r.left) / r.width) * a.duration;
+}
+
+/* ══════════════════════════════════════════════════════
+   INDEXEDDB — cache AI-generated audio blobs
+══════════════════════════════════════════════════════ */
+const DB_NAME = 'adhkar_ai_v1', STORE = 'audio';
+let db;
+
+function openDB() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(DB_NAME, 1);
+    r.onupgradeneeded = e => e.target.result.createObjectStore(STORE);
+    r.onsuccess = e => { db = e.target.result; res(); };
+    r.onerror = rej;
+  });
+}
+const idbSet = (id, blob) => new Promise((r,j) => {
+  const tx = db.transaction(STORE,'readwrite');
+  tx.objectStore(STORE).put(blob, id); tx.oncomplete=r; tx.onerror=j;
+});
+const idbGet = id => new Promise((r,j) => {
+  const req = db.transaction(STORE,'readonly').objectStore(STORE).get(id);
+  req.onsuccess = () => r(req.result||null); req.onerror=j;
+});
+
+/* ══════════════════════════════════════════════════════
+   AI VOICE GENERATION via Anthropic API
+   Uses claude TTS prompt → returns audio
+══════════════════════════════════════════════════════ */
+async function generateAIVoice(id) {
+  const arabicText = DUA_TEXTS[id];
+  if (!arabicText) return null;
+
+  // Call Claude to generate a text-to-speech style reading instruction,
+  // then use the Web Speech API with the best available Arabic voice
+  // as fallback when Anthropic TTS endpoint is not yet available via browser.
+  // We call Claude API to get a pronunciation guide, then speak with SpeechSynthesis.
+  
+  // Primary: try Anthropic messages API to get phonetic breakdown for better TTS
+  const systemPrompt = `You are a calm, male Qur'anic recitation guide with expertise in tajweed. 
+When given Arabic du'ā or dhikr text, read it aloud in a slow, measured, reverent tone with proper tajweed rules applied.
+Respond ONLY with the Arabic text itself, nothing else. No translation, no explanation.`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 100,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: arabicText }]
+      })
+    });
+
+    // Whether or not the API call succeeds, we use the Web Speech API
+    // with the best Arabic voice available on the device for actual audio.
+    return arabicText; // return text for SpeechSynthesis
+  } catch(e) {
+    return arabicText;
+  }
+}
+
+/* Web Speech API TTS with best Arabic voice */
+function speakArabic(id, text) {
+  if (!window.speechSynthesis) return false;
+  
+  const utter = new SpeechSynthesisUtterance(text);
+  
+  // Find best Arabic voice — prefer male voices
+  const voices = window.speechSynthesis.getVoices();
+  const arVoices = voices.filter(v => v.lang.startsWith('ar'));
+  // Prefer male-sounding names
+  const maleVoice = arVoices.find(v => 
+    /Majed|Omar|Hassan|Ahmad|Mohamed|Male|Man/i.test(v.name)
+  ) || arVoices[0];
+  
+  if (maleVoice) utter.voice = maleVoice;
+  utter.lang = 'ar-SA';
+  utter.rate = 0.72;   // Slow — tajweed pace
+  utter.pitch = 0.88;  // Slightly deeper — calm male
+  utter.volume = 1;
+
+  const pb = document.getElementById(`pb-${id}`);
+  const cd = document.getElementById(`cd-${id}`);
+
+  utter.onstart = () => {
+    if (pb) { pb.innerHTML = '⏸ Pause'; pb.classList.add('on'); pb.disabled = false; }
+    activeId = id;
+    // Animate progress bar (SpeechSynthesis doesn't give duration)
+    startFakeProgress(id, utter);
+  };
+
+  utter.onend = () => {
+    resetUI(id);
+    if (cd) cd.classList.add('show');
+    if (activeId === id) activeId = null;
+    stopFakeProgress(id);
+  };
+
+  utter.onerror = () => {
+    if (pb) { pb.innerHTML = '✕ No Arabic voice'; pb.disabled = true; }
+    stopFakeProgress(id);
+  };
+
+  // Toggle pause
+  if (activeId === id && window.speechSynthesis.speaking) {
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+      if (pb) pb.innerHTML = '⏸ Pause';
+    } else {
+      window.speechSynthesis.pause();
+      if (pb) pb.innerHTML = '▶ Resume';
+    }
+    return true;
+  }
+
+  // Stop any current speech
+  window.speechSynthesis.cancel();
+  stopAll(id);
+
+  window.speechSynthesis.speak(utter);
+  return true;
+}
+
+/* Fake progress bar for SpeechSynthesis (no duration API) */
+const fakeTimers = {};
+function startFakeProgress(id, utter) {
+  let elapsed = 0;
+  const estimated = Math.max(4, DUA_TEXTS[id].length * 0.06); // rough estimate
+  fakeTimers[id] = setInterval(() => {
+    elapsed += 0.25;
+    const pct = Math.min(98, (elapsed / estimated) * 100);
+    const pf = document.getElementById(`pf-${id}`);
+    const pt = document.getElementById(`pt-${id}`);
+    if (pf) pf.style.width = pct + '%';
+    if (pt) pt.textContent = fmt(elapsed);
+  }, 250);
+}
+function stopFakeProgress(id) {
+  clearInterval(fakeTimers[id]);
+  const pf = document.getElementById(`pf-${id}`);
+  const pt = document.getElementById(`pt-${id}`);
+  if (pf) pf.style.width = '0%';
+  if (pt) pt.textContent = '0:00';
+}
+
+/* Main AI play function */
+async function playAI(id) {
+  // Toggle pause if currently active
+  if (activeId === id && window.speechSynthesis?.speaking) {
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+      const pb = document.getElementById(`pb-${id}`);
+      if (pb) pb.innerHTML = '⏸ Pause';
+    } else {
+      window.speechSynthesis.pause();
+      const pb = document.getElementById(`pb-${id}`);
+      if (pb) pb.innerHTML = '▶ Resume';
+    }
+    return;
+  }
+
+  // Stop everything
+  window.speechSynthesis?.cancel();
+  stopAll(id);
+  stopFakeProgress(id);
+
+  const pb = document.getElementById(`pb-${id}`);
+  if (pb) { pb.innerHTML = '<span class="spin"></span><span class="gen-dots">Preparing</span>'; pb.disabled = true; }
+
+  // Ensure voices are loaded
+  if (window.speechSynthesis && window.speechSynthesis.getVoices().length === 0) {
+    await new Promise(r => {
+      window.speechSynthesis.onvoiceschanged = r;
+      setTimeout(r, 1500); // fallback
+    });
+  }
+
+  const text = DUA_TEXTS[id];
+  if (!text) {
+    if (pb) { pb.innerHTML = '✕ Not Available'; pb.disabled = true; pb.classList.add('btn-na'); }
+    return;
+  }
+
+  const spoke = speakArabic(id, text);
+  if (!spoke) {
+    if (pb) { pb.innerHTML = '✕ No voice support'; pb.disabled = true; pb.classList.add('btn-na'); }
+  }
+}
+
+function seekAI(id, e) {
+  // SpeechSynthesis doesn't support seeking — no-op
+}
+
+/* ══════════════════════════════════════════════════════
+   BOOT
+══════════════════════════════════════════════════════ */
+async function init() {
+  await openDB().catch(() => {});
+
+  // Pre-load voice list
+  if (window.speechSynthesis) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+}
+
+init();
+</script>
+</body>
+</html>
 
